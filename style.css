@@ -1,0 +1,97 @@
+:root{
+    --main-bg-color: rgb(0, 21, 37);
+    --house-bg-color: rgb(255, 145, 0);
+    --door-bg-color: rgb(227, 100, 20);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+}
+
+#house {
+    background-color: var(--main-bg-color);
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+}
+
+#roof{
+    background-color: var(--main-bg-color);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 200px 160px 200px;
+    border-color: transparent transparent var(--house-bg-color) transparent;
+}
+
+#chimney {
+    height: 100px;
+    width: 40px;
+    background-color: var(--house-bg-color);
+    position: absolute;
+    top: 20px;
+    left: 55px;
+}
+
+#structure{
+    background-color: var(--house-bg-color);
+    width: 90%;
+    height: 240px;
+    margin: 0px auto;
+}
+
+#windows{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.window {
+    background-color: var(--main-bg-color);
+    width: 85px;
+    height: 85px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.window::before{
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 85px;
+    margin-top: -5px;
+    border-top: 10px solid var(--house-bg-color);
+}
+
+.window::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    height: 85px;
+    margin-left: -5px;
+    border-left: 10px solid var(--house-bg-color);
+}
+
+#door {
+    width: 85px;
+    height: 135px;
+    margin: 10px auto;
+    background-color: var(--door-bg-color);
+    position: relative;
+}
+
+#door::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    background-color: var(--main-bg-color);
+    margin: 0px auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
